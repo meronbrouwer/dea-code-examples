@@ -1,6 +1,6 @@
 package nl.han.meron;
 
-import nl.han.meron.domain.AgressionLevel;
+import nl.han.meron.domain.crowdbehaviour.AgressionLevel;
 import nl.han.meron.domain.Crowd;
 import nl.han.meron.domain.Person;
 import nl.han.meron.domain.Speaker;

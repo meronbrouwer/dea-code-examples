@@ -1,5 +1,7 @@
 package nl.han.meron.domain;
 
+import nl.han.meron.domain.crowdbehaviour.AgressionLevel;
+
 public class Person {
 
     private AgressionLevel agressionLevel;
