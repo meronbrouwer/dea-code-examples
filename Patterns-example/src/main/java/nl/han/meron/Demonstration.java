@@ -21,11 +21,10 @@ public class Demonstration {
             sizeOfCrowd++;
         }
 
-        speaker = new Speaker(AgressionLevel.Low);
-
         crowd = new Crowd(persons);
-    }
 
+        speaker = new Speaker(crowd);
+    }
 
     public void demonstrate() {
         speaker.speech();

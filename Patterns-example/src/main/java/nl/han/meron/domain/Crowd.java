@@ -6,6 +6,7 @@ public class Crowd {
 
     private ArrayList<Person> persons = new ArrayList<Person>();
     private AgressionLevel agressionLevel;
+    private boolean crowdIsGoingWild = false;
 
     public Crowd(ArrayList<Person> persons) {
         this.persons = persons;
@@ -19,6 +20,12 @@ public class Crowd {
             this.agressionLevel = AgressionLevel.High;
         } else {
             System.out.print("DESTROOOOOOOOOOYYYYYYYY");
+            crowdIsGoingWild = true;
         }
     }
+
+    public boolean isCrowdIsGoingWild(){
+        return crowdIsGoingWild;
+    }
+
 }

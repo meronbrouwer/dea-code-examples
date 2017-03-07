@@ -1,15 +1,26 @@
 package nl.han.meron.domain;
 
-/**
- * Created by meron on 07/03/2017.
- */
-public class Speaker extends Person {
+public class Speaker {
 
-    public Speaker(AgressionLevel agressionLevel) {
-        super(agressionLevel);
+    private Crowd crowd;
+
+    public Speaker(Crowd crowd) {
+        this.crowd = crowd;
     }
 
     public void speech() {
+        saySomethingThatWorkesTheCrowd();
+    }
 
+    private void saySomethingThatWorkesTheCrowd() {
+        while (!crowd.isCrowdIsGoingWild()) {
+            System.out.println("Speaker is saying something");
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }
