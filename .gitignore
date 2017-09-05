@@ -1,0 +1,17 @@
+# IntelliJ
+out/
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+
+**/out/
+**/.idea/
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+
+# Mac
+.DS_Store
+
+# Maven
+##/log/
+##/target/
