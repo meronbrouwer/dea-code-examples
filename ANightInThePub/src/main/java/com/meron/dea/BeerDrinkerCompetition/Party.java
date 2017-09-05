@@ -7,12 +7,37 @@ public class Party {
     private Keg keg;
     private ArrayList<BeerDrinker> drinkers;
 
+    public static void main(String[] args) {
+        Party party = new Party();
+        party.startParty();
+    }
+
     /**
-     * Create a ne Party
+     * Create a new Party
      */
     public Party() {
         initKeg();
         initBeerdrinkers();
+    }
+
+
+    /**
+     * Start the party
+     */
+    public void startParty() {
+        while (keg.getRemainingVolume() > 0) {
+            for (BeerDrinker drinker : this.drinkers) {
+
+                if (keg.getRemainingVolume() > 0) {
+                    drinker.tapBeer();
+                } else {
+                    break;
+                }
+            }
+        }
+        for (BeerDrinker drinker : this.drinkers) {
+            drinker.drank();
+        }
     }
 
     private void initKeg() {
@@ -27,27 +52,5 @@ public class Party {
         drinkers.add(new BeerDrinker("Koen", keg));
         drinkers.add(new BeerDrinker("Leon", keg));
         drinkers.add(new BeerDrinker("Anne", keg));
-    }
-
-    public void startParty() {
-        while (keg.getRemainingVolume() > 0) {
-            for (BeerDrinker drinker : this.drinkers) {
-
-                if (keg.getRemainingVolume() > 0) {
-                    drinker.tapBeer();
-                } else {
-                    break;
-
-                }
-            }
-        }
-        for (BeerDrinker drinker : this.drinkers) {
-            drinker.drank();
-        }
-    }
-
-    public static void main(String[] args) {
-        Party party = new Party();
-        party.startParty();
     }
 }
